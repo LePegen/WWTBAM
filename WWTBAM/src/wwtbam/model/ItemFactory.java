@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
-import org.json.*;
+import org.json.JSONObject;
 
 /**
  *
@@ -21,11 +21,12 @@ public class ItemFactory {
     File file;
     JSONObject jObject;
     ArrayList<JSONObject> items;
-    int index=0;
-    
+    int index = 0;
+
     //redo code
     public ItemFactory() {
         //breaks SRP. suggestion: move to other class
+        
         this.file = new File("C:\\Users\\lipat\\Documents\\School\\WWTBAM\\WWTBAM\\WWTBAM\\src\\wwtbam\\model\\choices.json");
         FileReader fileReader;
         BufferedReader bufferedReader;
@@ -35,11 +36,13 @@ public class ItemFactory {
             String jsonContent = "";
             String tempString = "";
             while (!"".equals(tempString = bufferedReader.readLine())) {
-                jsonContent += tempString;
+                if (!tempString.matches("\\s")) {
+                    jsonContent += tempString + "\n";
+                }
             }
-       
+
             this.jObject = new JSONObject(jsonContent);
-         
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -49,27 +52,27 @@ public class ItemFactory {
     }
 
     public void addItems() {
-        
+
         JSONObject tempObject;
         int i = 0;
         for (int j = 0; j < jObject.getJSONArray("Questions").length(); j++) {
             tempObject = jObject.getJSONArray("Questions").getJSONObject(i);
             items.add(tempObject);
-            
+
         }
     }
-    
-    public Item getItem(){
-        String question=items.get(index).getString("Question");
-        return new Item(question);
-    
+
+    public Item getItem() {
+        String question = items.get(index).getString("Question");
+        String answer = items.get(index).getString("Answer");
+        return new Item(question, answer);
+
     }
 
     public static void main(String[] args) {
-        ItemFactory itemFactory=new ItemFactory();
-       
-               
-        System.out.println(itemFactory.getItem().getQuestion());
+        ItemFactory itemFactory = new ItemFactory();
+
+        System.out.println(itemFactory.getItem());
     }
 
 }

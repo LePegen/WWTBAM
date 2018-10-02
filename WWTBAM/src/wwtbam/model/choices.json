@@ -1,26 +1,27 @@
 {
    "Questions":[
     {
-        "Question":"",
-        "Answer":"",
+        "Question":"The red fox",
+        "Answer":"red",
         "FalseAnswers":{
         "Difficulty":"Easy"
         }
     },
     {
-        "Question":"",
-        "Answer":"",
+        "Question":"Brown dog",
+        "Answer":"dog",
         "FalseAnswers":{
          "Difficulty":"Easy"
         }
     },
     {
-        "Question":"",
-        "Answer":"",
+        "Question":"Lazy dog",
+        "Answer":"lazy",
         "FalseAnswers":{
          "Difficulty":"Easy"
         }
     }
+    
 ]
 }
 

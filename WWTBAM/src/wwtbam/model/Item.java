@@ -14,11 +14,13 @@ import java.util.ArrayList;
 public class Item {
    
     private String question;
+    private String answer;
     private ArrayList<AbstractAnswer> choices;
     private boolean isCorrect=false;
 
-    public Item(String question) {
+    public Item(String question,String answer) {
         this.question = question;
+        this.answer=answer;
     }
 
     public String getQuestion() {
@@ -44,6 +46,14 @@ public class Item {
     public void setIsCorrect(boolean isCorrect) {
         this.isCorrect = isCorrect;
     }
+
+    @Override
+    public String toString() {
+       
+          return question+","+answer;
+    }
+    
+    
     
     
     

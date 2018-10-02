@@ -9,9 +9,6 @@ package wwtbam.model;
  *
  * @author lipat
  */
-public class Model {
-
-    public Model() {
-    }
+public class Item {
     
 }

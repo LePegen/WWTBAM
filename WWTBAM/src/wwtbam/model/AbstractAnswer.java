@@ -9,6 +9,6 @@ package wwtbam.model;
  *
  * @author lipat
  */
-public class AbstractAnswer {
+public abstract class AbstractAnswer {
     
 }

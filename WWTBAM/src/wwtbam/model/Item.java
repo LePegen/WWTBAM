@@ -11,16 +11,16 @@ import java.util.ArrayList;
  *
  * @author lipat
  */
-public class Item {
-   
+public class Item implements AbstractItem {
+
     private String question;
     private String answer;
-    private ArrayList<AbstractAnswer> choices;
-    private boolean isCorrect=false;
+    private ArrayList<AbstractChoice> choices;
+    private boolean isCorrect = false;
 
-    public Item(String question,String answer) {
+    public Item(String question, String answer) {
         this.question = question;
-        this.answer=answer;
+        this.answer = answer;
     }
 
     public String getQuestion() {
@@ -31,34 +31,32 @@ public class Item {
         this.question = question;
     }
 
-    public ArrayList<AbstractAnswer> getChoices() {
-        return choices;
-    }
+ 
 
-    public void setChoices(ArrayList<AbstractAnswer> choices) {
+    public void setChoices(ArrayList<AbstractChoice> choices) {
         this.choices = choices;
     }
 
-    public boolean isIsCorrect() {
-        return isCorrect;
-    }
-
-    public void setIsCorrect(boolean isCorrect) {
-        this.isCorrect = isCorrect;
-    }
 
     @Override
     public String toString() {
-       
-          return question+","+answer;
+
+        return question + "," + answer;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    @Override
+    public ArrayList<AbstractChoice> getChoices() {
+        return choices;
+    }
+
+    @Override
+    public Boolean isCorrect() {
+        return isCorrect;
+    }
+
+    @Override
+    public void setCorrect(Boolean bool) {
+            this.isCorrect=bool;
+    }
+
 }

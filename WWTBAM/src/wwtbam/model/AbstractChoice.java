@@ -9,6 +9,7 @@ package wwtbam.model;
  *
  * @author lipat
  */
-public abstract class AbstractAnswer {
-    
+public interface AbstractChoice {
+    public boolean isCorrect();
+    public String getChoice();
 }

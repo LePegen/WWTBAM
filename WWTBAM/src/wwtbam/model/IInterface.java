@@ -5,17 +5,11 @@
  */
 package wwtbam.model;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author lipat
  */
-public interface AbstractItem {
-    public String getQuestion();
-    public ArrayList<AbstractChoice> getChoices();
-    public Boolean isCorrect();
-    public void setCorrect(Boolean bool);
-    
+public interface IInterface {
+    IItem getCurrentItem();
     
 }

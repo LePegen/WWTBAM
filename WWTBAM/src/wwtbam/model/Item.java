@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author lipat
  */
-public class Item implements AbstractItem {
+public class Item implements IItem {
 
     private String question;
     private String answer;
-    private ArrayList<AbstractChoice> choices;
+    private ArrayList<IChoice> choices;
     private boolean isCorrect = false;
 
     public Item(String question, String answer) {
@@ -33,7 +33,7 @@ public class Item implements AbstractItem {
 
  
 
-    public void setChoices(ArrayList<AbstractChoice> choices) {
+    public void setChoices(ArrayList<IChoice> choices) {
         this.choices = choices;
     }
 
@@ -45,7 +45,7 @@ public class Item implements AbstractItem {
     }
 
     @Override
-    public ArrayList<AbstractChoice> getChoices() {
+    public ArrayList<IChoice> getChoices() {
         return choices;
     }
 

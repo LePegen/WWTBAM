@@ -9,24 +9,6 @@ package wwtbam.model;
  *
  * @author lipat
  */
-public class CorrectChoice implements IChoice {
-
-    private boolean correct;
-    private String choice;
-
-    public CorrectChoice(String choice) {
-        correct = true;
-        this.choice = choice;
-    }
-
-    @Override
-    public boolean isCorrect() {
-        return correct;
-    }
-
-    @Override
-    public String getChoice() {
-        return this.choice;
-    }
-
+public class CorrectChoice {
+    
 }

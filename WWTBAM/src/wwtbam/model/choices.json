@@ -1,27 +1,27 @@
 {
-    "Questions": [
-        {
-            "Question": "The red fox",
-            "Answer": "red",
-            "Difficulty": "Easy",
-            "FalseAnswers": {
-                "Gene": "Garcia"
-            }
-        },
-        {
-            "Question": "Brown dog",
-            "Answer": "dog",
-            "Difficulty": "Easy",
-            "FalseAnswers": {
-            }
-        },
-        {
-            "Question": "Lazy dog",
-            "Answer": "lazy",
-            "Difficulty": "Easy",
-            "FalseAnswers": {
-            }
+   "Questions":[
+    {
+        "Question":"The red fox",
+        "Answer":"red",
+        "FalseAnswers":{
+        "Difficulty":"Easy"
         }
-    ]
+    },
+    {
+        "Question":"Brown dog",
+        "Answer":"dog",
+        "FalseAnswers":{
+         "Difficulty":"Easy"
+        }
+    },
+    {
+        "Question":"Lazy dog",
+        "Answer":"lazy",
+        "FalseAnswers":{
+         "Difficulty":"Easy"
+        }
+    }
+    
+]
 }
 

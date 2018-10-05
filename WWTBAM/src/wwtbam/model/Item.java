@@ -22,7 +22,10 @@ public class Item implements IItem {
         this.question = question;
         this.answer = answer;
     }
-
+    /**
+     * 
+     * @return 
+     */
     public String getQuestion() {
         return question;
     }

@@ -27,7 +27,7 @@ public class ItemFactory {
     public ItemFactory() {
         //breaks SRP. suggestion: move to other class
         
-        this.file = new File("C:\\Users\\lipat\\Documents\\School\\WWTBAM\\WWTBAM\\WWTBAM\\src\\wwtbam\\model\\choices.json");
+        this.file = new File("C:\\Users\\PRG07P-B67-13\\Documents\\NetBeansProjects\\wwtbam\\WWTBAM\\src\\wwtbam\\model\\choices.json");
         FileReader fileReader;
         BufferedReader bufferedReader;
         try {

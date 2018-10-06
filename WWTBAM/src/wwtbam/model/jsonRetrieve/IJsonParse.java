@@ -5,12 +5,13 @@
  */
 package wwtbam.model.jsonRetrieve;
 
+import java.util.ArrayList;
 import wwtbam.model.IItem;
 
 /**
  *
  * @author lipat
  */
-public interface IJsonItemAdapter extends IItem{
-    
+public interface IJsonParse {
+    ArrayList<IItem> getItems();
 }

@@ -16,10 +16,13 @@ public class Model implements IItem, IModel {
     ArrayList<IItem> items;
     IItem currentItem;
     int index;
+    ItemFactory itemFactory;
 
     public Model() {
-        items = new ArrayList<>();
-        index = 0;
+        itemFactory=new ItemFactory();
+        this.items=itemFactory.getItems();
+        index = -1;
+        nextItem();
     }
 
     @Override
@@ -49,7 +52,9 @@ public class Model implements IItem, IModel {
 
     @Override
     public boolean nextItem() {
-        if (index < getSize()) {
+        if (index < items.size()) {
+            index++;
+            currentItem=items.get(index);
             return true;
         }
         return false;

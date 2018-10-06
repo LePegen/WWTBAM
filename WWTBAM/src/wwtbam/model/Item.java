@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Item implements IItem {
 
     private String question;
-    private String answer;
+    private String difficulty;
     private ArrayList<IChoice> choices;
     private boolean isCorrect = false;
     /**
@@ -22,9 +22,10 @@ public class Item implements IItem {
      * @param question
      * @param answer 
      */
-    public Item(String question, String answer) {
+    public Item(String question,String difficulty) {
         this.question = question;
-        this.answer = answer;
+      
+        this.difficulty=difficulty;
     }
     /**
      * 
@@ -44,12 +45,6 @@ public class Item implements IItem {
         this.choices = choices;
     }
 
-
-    @Override
-    public String toString() {
-
-        return question + "," + answer;
-    }
 
     @Override
     public ArrayList<IChoice> getChoices() {

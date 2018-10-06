@@ -22,6 +22,10 @@ public class Controller implements IItemObserver{
         this.model = model;
         this.view = view;
         this.view.addObserver(this);
+        System.out.println(this.model.getQuestion());
+        model.nextItem();
+        System.out.println(this.model.getQuestion());
+
     }
     
     /*

@@ -10,6 +10,13 @@ package wwtbam.model;
  * @author lipat
  */
 public interface IModel {
+    /**
+     * @see IItem
+     * @return returns the current question
+     */
     IItem getCurrentItem();
+    boolean nextItem();
+    int getSize();
+    IItem getItem(int index);
     
 }

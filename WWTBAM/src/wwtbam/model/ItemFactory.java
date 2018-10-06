@@ -40,7 +40,6 @@ public class ItemFactory {
                     jsonContent += tempString + "\n";
                 }
             }
-
             this.jObject = new JSONObject(jsonContent);
 
         } catch (Exception ex) {
@@ -52,13 +51,11 @@ public class ItemFactory {
     }
 
     public void addItems() {
-
         JSONObject tempObject;
         int i = 0;
         for (int j = 0; j < jObject.getJSONArray("Questions").length(); j++) {
             tempObject = jObject.getJSONArray("Questions").getJSONObject(i);
             items.add(tempObject);
-
         }
     }
 
@@ -67,12 +64,6 @@ public class ItemFactory {
         String answer = items.get(index).getString("Answer");
         return new Item(question, answer);
 
-    }
-
-    public static void main(String[] args) {
-        ItemFactory itemFactory = new ItemFactory();
-
-        System.out.println(itemFactory.getItem());
     }
 
 }

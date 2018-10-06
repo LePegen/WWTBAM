@@ -1,12 +1,16 @@
 {
     "Questions": [
         {
-            "Question": "The red fox",
-            "Answer": "red",
+            "Question": "What team initiated the development of java?",
+            "Answer": "Green Team",
             "Difficulty": "Easy",
-            "FalseAnswers": {
-                "Gene": "Garcia"
-            }
+            "False Answers":[
+"Blue Team",
+"Red Team",
+"White Team",
+"Java Team",
+"Team John"            
+]
         },
         {
             "Question": "Brown dog",

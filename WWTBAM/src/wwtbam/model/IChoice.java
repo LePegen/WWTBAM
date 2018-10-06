@@ -12,11 +12,11 @@ package wwtbam.model;
 public interface IChoice {
     /**
      * 
-     * @return 
+     * @return true if is a correct choice
      */
     public boolean isCorrect();
     /**
-     * 
+     * This is the text to be put in the JButton
      * 
      * @return returns the value of the choice
      */

@@ -5,19 +5,63 @@
  */
 package wwtbam.view;
 
+import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import wwtbam.controller.IItemObserver;
+
 /**
  *
  * @author Visitor
  */
-public class QuestionPanel extends javax.swing.JPanel {
+public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel {
 
     /**
      * Creates new form QuestionPanel
      */
     public QuestionPanel() {
+        observers=new ArrayList<>();
         initComponents();
     }
 
+    //hard code starts here
+    ArrayList<IItemObserver> observers;
+
+    public void addObserver(IItemObserver observer) {
+        this.observers.add(observer);
+    }
+
+    @Override
+    public JLabel getQuestionNumber() {
+        return this.jLabel1;
+    }
+
+    @Override
+    public JLabel getQuestion() {
+        return this.lblQuestion;
+    }
+
+    @Override
+    public JButton getChoice1() {
+        return this.btnAnswer1;
+    }
+
+    @Override
+    public JButton getChoice2() {
+        return this.btnAnswer2;
+    }
+
+    @Override
+    public JButton getChoice3() {
+        return this.btnAnswer3;
+    }
+
+    @Override
+    public JButton getChoice4() {
+        return this.btnAnswer4;
+    }
+
+    //generated code
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,72 +71,152 @@ public class QuestionPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblQuestion = new javax.swing.JLabel();
+        btnAnswer1 = new javax.swing.JButton();
+        btnAnswer2 = new javax.swing.JButton();
+        btnAnswer3 = new javax.swing.JButton();
+        btnAnswer4 = new javax.swing.JButton();
+        btnLock = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
-        jLabel1.setText("Question");
+        lblQuestion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblQuestion.setText("Question");
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAnswer1.setText("Answer1");
+        btnAnswer1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAnswer1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("jButton2");
+        btnAnswer2.setText("Answer2");
+        btnAnswer2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnswer2ActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("jButton3");
+        btnAnswer3.setText("Answer3");
+        btnAnswer3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnswer3ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("jButton4");
+        btnAnswer4.setText("Answer4");
+        btnAnswer4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnswer4ActionPerformed(evt);
+            }
+        });
+
+        btnLock.setText("Lock In");
+        btnLock.setEnabled(false);
+
+        jLabel1.setText("Question #:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4))
+                        .addGap(163, 163, 163)
+                        .addComponent(btnLock))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(btnAnswer1, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                                        .addComponent(btnAnswer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(btnAnswer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnAnswer4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
                 .addContainerGap(33, Short.MAX_VALUE))
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAnswer1, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(btnAnswer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap(72, Short.MAX_VALUE))
+                    .addComponent(btnAnswer4, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(btnAnswer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnLock)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+    String test = "test";
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    public void setText() {
+        lblQuestion.setText(test);
+        btnAnswer1.setText(test);
+        btnAnswer2.setText(test);
+        btnAnswer3.setText(test);
+        btnAnswer4.setText(test);
+    }
+
+    private void btnAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer1ActionPerformed
+
+        btnAnswer1.setEnabled(false);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer1ActionPerformed
+
+    private void btnAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer2ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(false);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer2ActionPerformed
+
+    private void btnAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer3ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(false);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer3ActionPerformed
+
+    private void btnAnswer4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer4ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(false);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnAnswer1;
+    private javax.swing.JButton btnAnswer2;
+    private javax.swing.JButton btnAnswer3;
+    private javax.swing.JButton btnAnswer4;
+    private javax.swing.JButton btnLock;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblQuestion;
     // End of variables declaration//GEN-END:variables
+
 }

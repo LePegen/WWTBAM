@@ -5,19 +5,63 @@
  */
 package wwtbam.view;
 
+import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import wwtbam.controller.IItemObserver;
+
 /**
  *
  * @author Visitor
  */
-public class QuestionPanel extends javax.swing.JPanel {
+public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel {
 
     /**
      * Creates new form QuestionPanel
      */
     public QuestionPanel() {
+        observers=new ArrayList<>();
         initComponents();
     }
 
+    //hard code starts here
+    ArrayList<IItemObserver> observers;
+
+    public void addObserver(IItemObserver observer) {
+        this.observers.add(observer);
+    }
+
+    @Override
+    public JLabel getQuestionNumber() {
+        return this.jLabel1;
+    }
+
+    @Override
+    public JLabel getQuestion() {
+        return this.lblQuestion;
+    }
+
+    @Override
+    public JButton getChoice1() {
+        return this.btnAnswer1;
+    }
+
+    @Override
+    public JButton getChoice2() {
+        return this.btnAnswer2;
+    }
+
+    @Override
+    public JButton getChoice3() {
+        return this.btnAnswer3;
+    }
+
+    @Override
+    public JButton getChoice4() {
+        return this.btnAnswer4;
+    }
+
+    //generated code
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -121,7 +165,6 @@ public class QuestionPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
     String test = "test";
-    
     public void setText() {
         lblQuestion.setText(test);
         btnAnswer1.setText(test);
@@ -129,6 +172,33 @@ public class QuestionPanel extends javax.swing.JPanel {
         btnAnswer3.setText(test);
         btnAnswer4.setText(test);
     }
+
+    private void btnAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer1ActionPerformed
+
+        btnAnswer1.setEnabled(false);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer1ActionPerformed
+
+    private void btnAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer2ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(false);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer2ActionPerformed
+
+    private void btnAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer3ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(false);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer3ActionPerformed
+
+=======
     
     private void btnAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer1ActionPerformed
         
@@ -175,4 +245,5 @@ public class QuestionPanel extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblQuestion;
     // End of variables declaration//GEN-END:variables
+
 }

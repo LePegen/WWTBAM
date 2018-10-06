@@ -165,7 +165,6 @@ public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel 
         );
     }// </editor-fold>//GEN-END:initComponents
     String test = "test";
-
     public void setText() {
         lblQuestion.setText(test);
         btnAnswer1.setText(test);
@@ -176,6 +175,34 @@ public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel 
 
     private void btnAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer1ActionPerformed
 
+        btnAnswer1.setEnabled(false);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer1ActionPerformed
+
+    private void btnAnswer2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer2ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(false);
+        btnAnswer3.setEnabled(true);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer2ActionPerformed
+
+    private void btnAnswer3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer3ActionPerformed
+        btnAnswer1.setEnabled(true);
+        btnAnswer2.setEnabled(true);
+        btnAnswer3.setEnabled(false);
+        btnAnswer4.setEnabled(true);
+        btnLock.setEnabled(true);
+    }//GEN-LAST:event_btnAnswer3ActionPerformed
+
+=======
+    
+    private void btnAnswer1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnswer1ActionPerformed
+        
+        
         btnAnswer1.setEnabled(false);
         btnAnswer2.setEnabled(true);
         btnAnswer3.setEnabled(true);

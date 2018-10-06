@@ -17,7 +17,11 @@ public class Item implements IItem {
     private String answer;
     private ArrayList<IChoice> choices;
     private boolean isCorrect = false;
-
+    /**
+     * 
+     * @param question
+     * @param answer 
+     */
     public Item(String question, String answer) {
         this.question = question;
         this.answer = answer;

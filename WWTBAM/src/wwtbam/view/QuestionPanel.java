@@ -164,13 +164,7 @@ public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel 
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    public void setText() {
-        lblQuestion.setText(test);
-        btnAnswer1.setText(test);
-        btnAnswer2.setText(test);
-        btnAnswer3.setText(test);
-        btnAnswer4.setText(test);
-    }
+    
 
 
     

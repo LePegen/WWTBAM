@@ -13,5 +13,7 @@ import wwtbam.model.IChoice;
  */
 public interface IItemObserver {
     void choicePressed(IChoice choice);
-    
+    void toHomePanel();
+    void toQuestionPanel();
+    void toGameOver();
 }

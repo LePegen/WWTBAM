@@ -6,6 +6,7 @@
 package wwtbam.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -38,11 +39,17 @@ public class Item implements IItem {
     public void setQuestion(String question) {
         this.question = question;
     }
+    
+    public String getDifficulty(){
+        return this.difficulty;
+    }
 
  
 
-    public void setChoices(ArrayList<IChoice> choices) {
+    public void setChoices(ArrayList<IChoice> choices) {        
         this.choices = choices;
+        Collections.shuffle(choices);
+
     }
 
 

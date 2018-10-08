@@ -15,14 +15,20 @@ public class Model implements IItem, IModel {
 
     ArrayList<IItem> items;
     IItem currentItem;
-    int index;
+    int questionNumber;
     ItemFactory itemFactory;
+    int prize;
 
     public Model() {
         itemFactory=new ItemFactory();
         this.items=itemFactory.getItems();
-        index = -1;
+        questionNumber = -1;
+        prize=0;
         nextItem();
+    }
+    
+    public int getPrize(){
+    return prize;
     }
 
     @Override
@@ -52,9 +58,9 @@ public class Model implements IItem, IModel {
 
     @Override
     public boolean nextItem() {
-        if (index < items.size()) {
-            index++;
-            currentItem=items.get(index);
+        if (questionNumber < items.size()) {
+            questionNumber++;
+            currentItem=items.get(questionNumber);
             return true;
         }
         return false;

@@ -23,7 +23,7 @@ public class ItemFactory {
     ArrayList<IItem> items;
 
     public ItemFactory() {
-        jsonParse = new ParseJson("src\\wwtbam\\model\\jsonRetrieve\\choices.json");
+        jsonParse = new ParseJson("src/wwtbam/model/jsonRetrieve/choices.json");
         this.items=jsonParse.getItems();
     }
 

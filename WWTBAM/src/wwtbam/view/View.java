@@ -13,50 +13,64 @@ import wwtbam.controller.IItemObserver;
  *
  * @author lipat
  */
-public class View extends JFrame{
+public class View extends JFrame {
+
     QuestionPanel questionPanel;
     HomePanel homePanel;
-    
+    GameOverPanel gameOverPanel;
+    ContinuePanel continuePanel;
+
     JPanel currentPanel;
-    
+
     public View() {
-        questionPanel=new QuestionPanel();
-        homePanel=new HomePanel();
-     
+        questionPanel = new QuestionPanel();
+        homePanel = new HomePanel();
+        gameOverPanel = new GameOverPanel();
+        continuePanel = new ContinuePanel();
+
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(500,500);
-        
+        this.setSize(500, 500);
+
         this.setPanel(homePanel);
         this.setVisible(true);
-        
-        this.setPanel(homePanel);
-       
-    }
-    
-    public QuestionPanel getQuestionPanel(){
-    return this.questionPanel;
-    }
-    
-    public void setPanel(JPanel panel){
-        if (currentPanel != null) {
-        this.remove(currentPanel);
-        }
-        this.currentPanel=panel;
-        this.add(currentPanel);
-        this.validate();
+      
 
     }
-    
-    public HomePanel getHomePanel(){
-    return this.homePanel;
-    }
-    
+
+ 
+    public void setPanel(JPanel panel) {
+        if (currentPanel != null) {
+            this.remove(currentPanel);
+        }
+        this.currentPanel = panel;
+        this.add(currentPanel);
+        this.validate();
+        this.repaint();
         
-    public void addObserver(IItemObserver iItemObserver){
-        questionPanel.addObserver(iItemObserver);
-        homePanel.setObserver(iItemObserver);
+    }   
+    
+    public QuestionPanel getQuestionPanel() {
+        return questionPanel;
     }
-    
-    
+
+    public HomePanel getHomePanel() {
+        return homePanel;
+    }
+
+    public GameOverPanel getGameOverPanel() {
+        return gameOverPanel;
+    }
+
+    public ContinuePanel getContinuePanel() {
+        return continuePanel;
+    }
+
+    public void addObserver(IItemObserver iItemObserver) {
+        questionPanel.addObserver(iItemObserver);
+        homePanel.addObserver(iItemObserver);
+        gameOverPanel.addObserver(iItemObserver);
+        continuePanel.addObserver(iItemObserver);
+    }
+
 }
 //d

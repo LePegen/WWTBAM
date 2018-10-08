@@ -5,19 +5,28 @@
  */
 package wwtbam.view;
 
+import javax.swing.JLabel;
+import wwtbam.controller.IItemObserver;
+
 /**
  *
  * @author chescapaor
  */
-public class ContinuePanel extends javax.swing.JPanel {
+public class ContinuePanel extends javax.swing.JPanel  implements Observable{
 
     /**
      * Creates new form ContinuePanel
      */
+    IItemObserver observer;
     public ContinuePanel() {
         initComponents();
     }
 
+    public JLabel getPrizeLbl() {
+        return prizeLbl;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,14 +37,27 @@ public class ContinuePanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        noBtn = new javax.swing.JButton();
+        yesBtn = new javax.swing.JButton();
+        prizeLbl = new javax.swing.JLabel();
 
         jLabel1.setText("Take the ___");
 
-        jButton1.setText("NO");
+        noBtn.setText("NO");
+        noBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noBtnActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("YES");
+        yesBtn.setText("YES");
+        yesBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yesBtnActionPerformed(evt);
+            }
+        });
+
+        prizeLbl.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -44,32 +66,53 @@ public class ContinuePanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(108, 108, 108)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                        .addComponent(yesBtn)
+                        .addGap(34, 34, 34)
+                        .addComponent(noBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(prizeLbl)))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(112, 112, 112)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jLabel1)
+                    .addComponent(prizeLbl))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(noBtn)
+                    .addComponent(yesBtn))
                 .addContainerGap(125, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void yesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesBtnActionPerformed
+        observer.toGameOver();
+    }//GEN-LAST:event_yesBtnActionPerformed
+
+    private void noBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noBtnActionPerformed
+
+        observer.toQuestionPanel();
+    }//GEN-LAST:event_noBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton noBtn;
+    private javax.swing.JLabel prizeLbl;
+    private javax.swing.JButton yesBtn;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void addObserver(IItemObserver observer) {
+        this.observer=observer;
+    }
+    
+    
 }

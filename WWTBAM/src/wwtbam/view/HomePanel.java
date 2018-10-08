@@ -11,7 +11,7 @@ import wwtbam.controller.IItemObserver;
  *
  * @author Visitor
  */
-public class HomePanel extends javax.swing.JPanel {
+public class HomePanel extends javax.swing.JPanel implements Observable{
 
     /**
      * Creates new form HomePanel
@@ -22,9 +22,7 @@ public class HomePanel extends javax.swing.JPanel {
         initComponents();
     }
     
-    public void setObserver(IItemObserver observer){
-        this.observer=observer;
-    }
+ 
     
     
 
@@ -121,4 +119,9 @@ public class HomePanel extends javax.swing.JPanel {
     private javax.swing.JButton Helpbtn;
     private javax.swing.JButton Startbtn;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void addObserver(IItemObserver observer) {
+        this.observer = observer;
+    }
 }

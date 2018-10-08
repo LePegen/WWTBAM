@@ -5,21 +5,11 @@
  */
 package wwtbam.controller;
 
-import wwtbam.model.IChoice;
-
 /**
  *
  * @author lipat
  */
-public interface IItemObserver {
-
-    void choicePressed(IChoice choice);
-
-    void toHomePanel();
-
-    void toQuestionPanel();
-
-    void toGameOver();
-
-    void toContinuePanel();
+public interface Updateable {
+    public void update();
+    
 }

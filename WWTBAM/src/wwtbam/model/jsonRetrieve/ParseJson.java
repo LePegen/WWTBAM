@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.*;
 import wwtbam.model.CorrectChoice;
+import wwtbam.model.DifficultyFactory;
 import wwtbam.model.FalseChoice;
 import wwtbam.model.IChoice;
 import wwtbam.model.IItem;
@@ -30,7 +31,10 @@ public class ParseJson implements IJsonParse, UseLocalFile {
     String data;
     JSONObject jObject;
 
+    DifficultyFactory difficultyFactory;
+
     public ParseJson(String dir) {
+        difficultyFactory = new DifficultyFactory();
         items = new ArrayList<>();
         setupFile(dir);
         initializeItems();
@@ -50,10 +54,12 @@ public class ParseJson implements IJsonParse, UseLocalFile {
             for (int j = 0; j < falseAnsArr.length(); j++) {
                 choices.add(new FalseChoice(falseAnsArr.getString(j)));
             }
-
-            Item tempItem = new Item(question, difficulty);
+            choices.add(answer);
+            Item tempItem = new Item(question);
             tempItem.setChoices(choices);
+            tempItem.setDifficulty(difficultyFactory.getDifficulty(difficulty));
             items.add(tempItem);
+
         }
 
     }
@@ -70,14 +76,14 @@ public class ParseJson implements IJsonParse, UseLocalFile {
     public void setupFile(String dir) {
         this.file = new File(dir);
         try {
-            bufferedReader=new BufferedReader(new FileReader(file));
-            String currLine="";
-            String jsonContent="";
-            while((currLine=bufferedReader.readLine())!=null){
-                jsonContent+=currLine;
+            bufferedReader = new BufferedReader(new FileReader(file));
+            String currLine = "";
+            String jsonContent = "";
+            while ((currLine = bufferedReader.readLine()) != null) {
+                jsonContent += currLine;
             }
-      
-            this.jObject=new JSONObject(jsonContent);
+
+            this.jObject = new JSONObject(jsonContent);
         } catch (Exception e) {
             e.printStackTrace();
         }

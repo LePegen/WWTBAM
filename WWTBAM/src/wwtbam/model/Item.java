@@ -15,7 +15,7 @@ import java.util.Collections;
 public class Item implements IItem {
 
     private String question;
-    private String difficulty;
+    private Difficulty difficulty;
     private ArrayList<IChoice> choices;
     private boolean isCorrect = false;
     /**
@@ -23,7 +23,7 @@ public class Item implements IItem {
      * @param question
      * @param answer 
      */
-    public Item(String question,String difficulty) {
+    public Item(String question) {
         this.question = question;
       
         this.difficulty=difficulty;
@@ -40,9 +40,15 @@ public class Item implements IItem {
         this.question = question;
     }
     
-    public String getDifficulty(){
+    public Difficulty getDifficulty(){
         return this.difficulty;
     }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+    
+    
 
  
 

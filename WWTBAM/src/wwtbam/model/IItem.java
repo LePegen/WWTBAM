@@ -32,5 +32,9 @@ public interface IItem {
      * @param bool set true if selected CorrectChoice
      */
     public void setCorrect(Boolean bool);
+    
+    public Difficulty getDifficulty();
+    
+    
 
 }

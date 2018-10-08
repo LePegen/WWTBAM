@@ -15,7 +15,7 @@ public interface IQuestionPanel{
     //todo: add documentation
     JLabel getQuestionNumber();
 
-    JLabel getQuestion();
+    JTextArea getQuestion();
 
     JButton getChoice1();
 
@@ -24,5 +24,7 @@ public interface IQuestionPanel{
     JButton getChoice3();
 
     JButton getChoice4();
+    
+    JProgressBar getTimeLeft();
 
 }

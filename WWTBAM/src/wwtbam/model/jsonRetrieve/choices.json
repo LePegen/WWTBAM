@@ -7,9 +7,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",        
                 ]
         },
         {
@@ -19,9 +17,7 @@
             "False Answers":[
                 "Functional",
                 "Declarative",
-                "Structured",
-                "Java",
-                "Team John"            
+                "Structured",          
                 ]
         },
         {
@@ -31,9 +27,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",          
                 ]
         },
         {
@@ -43,9 +37,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",            
                 ]
         },
         {
@@ -55,9 +47,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",          
                 ]
         },
         {
@@ -67,9 +57,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",           
                 ]
         },
         {
@@ -79,9 +67,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",           
                 ]
         },
         {
@@ -91,9 +77,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",
-                "Java Team",
-                "Team John"            
+                "White Team",           
                 ]
         }
     ]

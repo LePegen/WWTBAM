@@ -5,19 +5,31 @@
  */
 package wwtbam.view;
 
+import javax.swing.JLabel;
+import wwtbam.controller.IItemObserver;
+
 /**
  *
  * @author chescapaor
  */
-public class GameOverPanel extends javax.swing.JPanel {
-
+public class GameOverPanel extends javax.swing.JPanel implements Observable{
+    
     /**
      * Creates new form GameOverPanel
      */
+    IItemObserver observer;
+
     public GameOverPanel() {
         initComponents();
     }
 
+    public JLabel getPrizelbl() {
+        return prizelbl;
+    }
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +42,7 @@ public class GameOverPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        prizelbl = new javax.swing.JLabel();
 
         jLabel1.setText("You won ___");
 
@@ -37,27 +50,33 @@ public class GameOverPanel extends javax.swing.JPanel {
 
         jButton2.setText("Exit");
 
+        prizelbl.setText("jLabel2");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(162, 162, 162)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(77, 77, 77)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(63, 63, 63))
+                .addGap(69, 69, 69))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(prizelbl)
+                .addGap(99, 99, 99))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(jLabel1)
-                .addGap(69, 69, 69)
+                .addGap(105, 105, 105)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(prizelbl))
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -70,5 +89,11 @@ public class GameOverPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel prizelbl;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void addObserver(IItemObserver observer) {
+        this.observer=observer;
+    }
 }

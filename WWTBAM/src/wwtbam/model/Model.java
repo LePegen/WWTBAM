@@ -18,18 +18,52 @@ public class Model implements IItem, IModel {
     int questionNumber;
     ItemFactory itemFactory;
     int prize;
+    int timeLeft;
+    int totalTimeLeft;
 
     public Model() {
-        itemFactory=new ItemFactory();
-        this.items=itemFactory.getItems();
+        itemFactory = new ItemFactory();
+        this.items = itemFactory.getItems();
         questionNumber = -1;
-        prize=0;
+        totalTimeLeft=30;
+        prize = 0;
         nextItem();
     }
-    
-    public int getPrize(){
-    return prize;
+
+    public int getQuestionNumber() {
+        return questionNumber;
     }
+    
+    
+
+    public int getTotalTime() {
+        return totalTimeLeft;
+    }
+    
+    public Difficulty getDifficulty(){
+    return this.currentItem.getDifficulty();
+    }
+    
+
+    public int getPrize() {
+        return prize;
+    }
+
+    public void setPrize(int prize) {
+        this.prize = prize;
+    }
+
+    public int getTimeLeft() {
+        return timeLeft;
+    }
+
+    public void setTimeLeft(int timeLeft) {
+        this.timeLeft = timeLeft;
+    }
+    
+    
+    
+    
 
     @Override
     public String getQuestion() {
@@ -60,7 +94,7 @@ public class Model implements IItem, IModel {
     public boolean nextItem() {
         if (questionNumber < items.size()) {
             questionNumber++;
-            currentItem=items.get(questionNumber);
+            currentItem = items.get(questionNumber);
             return true;
         }
         return false;

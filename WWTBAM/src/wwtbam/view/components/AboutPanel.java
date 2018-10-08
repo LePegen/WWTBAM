@@ -3,36 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.view;
-
-import javax.swing.JButton;
-import wwtbam.model.IChoice;
+package wwtbam.view.components;
 
 /**
  *
  * @author lipat
  */
-public class JButtonChoice extends JButton {
+public class AboutPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form JButtonItem
+     * Creates new form aboutPanel
      */
-    
-    IChoice choice;
-    public JButtonChoice() {
+    public AboutPanel() {
         initComponents();
     }
-
-    public void setChoice(IChoice choice) {
-        this.choice = choice;
-    }
-
-    public IChoice getChoice() {
-        return choice;
-    }
-    
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,6 +26,17 @@ public class JButtonChoice extends JButton {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 

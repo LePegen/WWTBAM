@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.view;
+package wwtbam.view.components;
 
 import javax.swing.JLabel;
 import wwtbam.controller.IItemObserver;
+import wwtbam.view.Observable;
 
 /**
  *
@@ -47,6 +48,11 @@ public class GameOverPanel extends javax.swing.JPanel implements Observable{
         jLabel1.setText("You won ___");
 
         jButton1.setText("Restart");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Exit");
 
@@ -83,6 +89,10 @@ public class GameOverPanel extends javax.swing.JPanel implements Observable{
                 .addContainerGap(94, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        observer.restart();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

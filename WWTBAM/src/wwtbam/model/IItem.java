@@ -5,6 +5,7 @@
  */
 package wwtbam.model;
 
+import wwtbam.model.implementations.Difficulty;
 import java.util.ArrayList;
 
 /**

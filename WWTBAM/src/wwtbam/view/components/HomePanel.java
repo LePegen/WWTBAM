@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.view;
+package wwtbam.view.components;
 
+import javax.swing.JOptionPane;
 import wwtbam.controller.IItemObserver;
+import wwtbam.view.Observable;
 
 /**
  *
@@ -20,6 +22,13 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
     public HomePanel() {
         
         initComponents();
+    }
+    public void showInstructions() {
+        JOptionPane.showMessageDialog(this, new InstructionPanel(),"Instructions",JOptionPane.PLAIN_MESSAGE,null);
+    }
+
+    public void showAbout() {
+        JOptionPane.showMessageDialog(this, new AboutPanel(), "About Us", JOptionPane.PLAIN_MESSAGE, null);
     }
     
  
@@ -97,11 +106,11 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
     }// </editor-fold>//GEN-END:initComponents
 
     private void CreditsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditsbtnActionPerformed
-        // TODO add your handling code here:
+       showAbout();
     }//GEN-LAST:event_CreditsbtnActionPerformed
 
     private void HelpbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpbtnActionPerformed
-        // TODO add your handling code here:
+       showInstructions();
     }//GEN-LAST:event_HelpbtnActionPerformed
 
     private void StartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartbtnActionPerformed

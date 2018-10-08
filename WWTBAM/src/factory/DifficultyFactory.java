@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.model;
+package factory;
+
+import wwtbam.model.implementations.Difficulty;
 
 /**
  *
@@ -18,10 +20,10 @@ public class DifficultyFactory {
                 return new Difficulty(30, "Easy", 20000);
              
             case "Intermediate":
-                return new Difficulty(30, "Intermediate", 20000);
+                return new Difficulty(20, "Intermediate", 150000);
 
             case "Hard":
-                return new Difficulty(30, "Hard", 20000);
+                return new Difficulty(15, "Hard", 450000);
 
 
         }

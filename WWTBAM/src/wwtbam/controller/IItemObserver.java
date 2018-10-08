@@ -11,6 +11,7 @@ import wwtbam.model.IChoice;
  *
  * @author lipat
  */
+//pseudo observer design pattern
 public interface IItemObserver {
 
     void choicePressed(IChoice choice);
@@ -22,4 +23,6 @@ public interface IItemObserver {
     void toGameOver();
 
     void toContinuePanel();
+    
+    void restart();
 }

@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.model;
+package wwtbam.model.implementations;
+
+import wwtbam.model.IChoice;
 
 /**
  *
  * @author lipat
  */
-public class CorrectChoice implements IChoice {
+public class FalseChoice implements IChoice {
 
     private boolean correct;
     private String choice;
 
-    public CorrectChoice(String choice) {
-        correct = true;
+    public FalseChoice(String choice) {
+        correct = false;
         this.choice = choice;
     }
 

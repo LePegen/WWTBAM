@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.model;
+package factory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import org.json.JSONObject;
+import wwtbam.model.IItem;
 import wwtbam.model.jsonRetrieve.ParseJson;
 
 /**

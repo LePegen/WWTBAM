@@ -7,7 +7,7 @@
             "False Answers":[
                 "Blue Team",
                 "Red Team",
-                "White Team",        
+                "White Team"        
                 ]
         },
         {
@@ -17,69 +17,78 @@
             "False Answers":[
                 "Functional",
                 "Declarative",
-                "Structured",          
+                "Structured"        
                 ]
         },
         {
-            "Question": "What team initiated the development of java?",
-            "Answer": "Green Team",
+            "Question": "What country was java island, the island that java was named after, located?",
+            "Answer": "Indonesia",
             "Difficulty": "Easy",
             "False Answers":[
-                "Blue Team",
-                "Red Team",
-                "White Team",          
+                "Malaysia",
+                "India",
+                "Vietnam"          
+                ]
+        },
+         {
+            "Question": "Which of these is a primitive data type?",
+            "Answer": "Boolean",
+            "Difficulty": "Easy",
+            "False Answers":[
+                "String",
+                "Array",
+                "Vector"        
                 ]
         },
         {
-            "Question": "What team initiated the development of java?",
-            "Answer": "Green Team",
+            "Question": "Which of there can you store in a char?",
+            "Answer": "'a'",
+            "Difficulty": "Easy",
+            "False Answers":[
+                "1",
+                ".0",
+                "\"a\""        
+                ]
+        },
+        {
+            "Question": "What is the proper syntax to declare the main method?",
+            "Answer": "public static void main(String[] s)",
             "Difficulty": "Intermediate",
             "False Answers":[
-                "Blue Team",
-                "Red Team",
-                "White Team",            
+                "public static void main(String args)",
+                "Public static void main(String[] args)",
+                "public static void main(Strings[] args)"            
                 ]
         },
         {
-            "Question": "What team initiated the development of java?",
-            "Answer": "Green Team",
+            "Question": "What is used for documentation in java?",
+            "Answer": "/**",
             "Difficulty": "Intermediate",
             "False Answers":[
-                "Blue Team",
-                "Red Team",
-                "White Team",          
+                "/",
+                "//",
+                "/*"          
                 ]
         },
         {
-            "Question": "What team initiated the development of java?",
-            "Answer": "Green Team",
+            "Question": "Which of these is not a type of loop?",
+            "Answer": "while do",
             "Difficulty": "Intermediate",
             "False Answers":[
-                "Blue Team",
-                "Red Team",
-                "White Team",           
+                "for",
+                "while",
+                "do while"           
                 ]
         },
         {
-            "Question": "What team initiated the development of java?",
-            "Answer": "Green Team",
+            "Question": "Which of these is an advantage application of java?",
+            "Answer": "Rich API",
             "Difficulty": "Hard",
             "False Answers":[
-                "Blue Team",
-                "Red Team",
-                "White Team",           
-                ]
-        },
-        {
-            "Question": "What team initiated the development of java?",
-            "Answer": "Green Team",
-            "Difficulty": "Hard",
-            "False Answers":[
-                "Blue Team",
-                "Red Team",
-                "White Team",           
+                "Memory Management",
+                "Well Optimized compared to other languages",
+                "High Quality Data Structures"           
                 ]
         }
     ]
 }
-

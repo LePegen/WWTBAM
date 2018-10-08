@@ -13,12 +13,12 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.*;
-import wwtbam.model.CorrectChoice;
-import wwtbam.model.DifficultyFactory;
-import wwtbam.model.FalseChoice;
+import wwtbam.model.implementations.CorrectChoice;
+import factory.DifficultyFactory;
+import wwtbam.model.implementations.FalseChoice;
 import wwtbam.model.IChoice;
 import wwtbam.model.IItem;
-import wwtbam.model.Item;
+import wwtbam.model.implementations.Item;
 
 /**
  *

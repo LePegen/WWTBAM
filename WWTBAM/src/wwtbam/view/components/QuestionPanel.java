@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.view;
+package wwtbam.view.components;
 
 import com.sun.java.swing.plaf.windows.WindowsBorders;
 import java.awt.Color;
@@ -14,7 +14,9 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import wwtbam.controller.IItemObserver;
-import wwtbam.model.CorrectChoice;
+import wwtbam.model.implementations.CorrectChoice;
+import wwtbam.view.IQuestionPanel;
+import wwtbam.view.Observable;
 
 /**
  *
@@ -120,10 +122,10 @@ public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel,
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         questionNumber = new javax.swing.JLabel();
-        btnAnswer1 = new wwtbam.view.JButtonChoice();
-        btnAnswer2 = new wwtbam.view.JButtonChoice();
-        btnAnswer3 = new wwtbam.view.JButtonChoice();
-        btnAnswer4 = new wwtbam.view.JButtonChoice();
+        btnAnswer1 = new wwtbam.view.components.JButtonChoice();
+        btnAnswer2 = new wwtbam.view.components.JButtonChoice();
+        btnAnswer3 = new wwtbam.view.components.JButtonChoice();
+        btnAnswer4 = new wwtbam.view.components.JButtonChoice();
         jScrollPane1 = new javax.swing.JScrollPane();
         lblQuestion = new javax.swing.JTextArea();
         timeLeftPB = new javax.swing.JProgressBar();
@@ -365,10 +367,10 @@ public class QuestionPanel extends javax.swing.JPanel implements IQuestionPanel,
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private wwtbam.view.JButtonChoice btnAnswer1;
-    private wwtbam.view.JButtonChoice btnAnswer2;
-    private wwtbam.view.JButtonChoice btnAnswer3;
-    private wwtbam.view.JButtonChoice btnAnswer4;
+    private wwtbam.view.components.JButtonChoice btnAnswer1;
+    private wwtbam.view.components.JButtonChoice btnAnswer2;
+    private wwtbam.view.components.JButtonChoice btnAnswer3;
+    private wwtbam.view.components.JButtonChoice btnAnswer4;
     private javax.swing.JButton btnLock;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

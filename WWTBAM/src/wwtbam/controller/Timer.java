@@ -64,7 +64,6 @@ public class Timer implements Runnable, Updateable {
 
     @Override
     public void update() {
-        System.out.println(this.time);
         this.toUpdate.update();
     }
 

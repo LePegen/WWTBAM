@@ -225,7 +225,7 @@
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
     </Component>
-    <Component class="wwtbam.view.JButtonChoice" name="btnAnswer1">
+    <Component class="wwtbam.view.components.JButtonChoice" name="btnAnswer1">
       <Properties>
         <Property name="text" type="java.lang.String" value="jButtonItem1"/>
       </Properties>
@@ -233,7 +233,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnswer1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="wwtbam.view.JButtonChoice" name="btnAnswer2">
+    <Component class="wwtbam.view.components.JButtonChoice" name="btnAnswer2">
       <Properties>
         <Property name="text" type="java.lang.String" value="jButtonItem2"/>
       </Properties>
@@ -241,7 +241,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnswer2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="wwtbam.view.JButtonChoice" name="btnAnswer3">
+    <Component class="wwtbam.view.components.JButtonChoice" name="btnAnswer3">
       <Properties>
         <Property name="text" type="java.lang.String" value="jButtonItem3"/>
       </Properties>
@@ -249,7 +249,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnswer3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="wwtbam.view.JButtonChoice" name="btnAnswer4">
+    <Component class="wwtbam.view.components.JButtonChoice" name="btnAnswer4">
       <Properties>
         <Property name="text" type="java.lang.String" value="jButtonItem4"/>
       </Properties>

@@ -5,9 +5,15 @@
  */
 package wwtbam.view;
 
+import wwtbam.view.components.GameOverPanel;
+import wwtbam.view.components.ContinuePanel;
+import wwtbam.view.components.HomePanel;
+import wwtbam.view.components.QuestionPanel;
 import java.awt.CardLayout;
 import javax.swing.*;
 import wwtbam.controller.IItemObserver;
+import wwtbam.view.components.AboutPanel;
+import wwtbam.view.components.InstructionPanel;
 
 /**
  *
@@ -19,9 +25,11 @@ public class View extends JFrame {
     HomePanel homePanel;
     GameOverPanel gameOverPanel;
     ContinuePanel continuePanel;
-
     JPanel currentPanel;
 
+    /**
+     * to add: about panel how to play panel winner panel
+     */
     public View() {
         questionPanel = new QuestionPanel();
         homePanel = new HomePanel();
@@ -33,11 +41,9 @@ public class View extends JFrame {
 
         this.setPanel(homePanel);
         this.setVisible(true);
-      
 
     }
 
- 
     public void setPanel(JPanel panel) {
         if (currentPanel != null) {
             this.remove(currentPanel);
@@ -46,9 +52,13 @@ public class View extends JFrame {
         this.add(currentPanel);
         this.validate();
         this.repaint();
-        
-    }   
+
+    }
+
+  
     
+    
+
     public QuestionPanel getQuestionPanel() {
         return questionPanel;
     }

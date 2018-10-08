@@ -42,7 +42,7 @@ public class ContinuePanel extends javax.swing.JPanel  implements Observable{
         yesBtn = new javax.swing.JButton();
         prizeLbl = new javax.swing.JLabel();
 
-        jLabel1.setText("Take the ___");
+        jLabel1.setText("Take the");
 
         noBtn.setText("NO");
         noBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -65,18 +65,18 @@ public class ContinuePanel extends javax.swing.JPanel  implements Observable{
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(108, 108, 108)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(yesBtn)
+                    .addComponent(jLabel1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(yesBtn)
                         .addGap(34, 34, 34)
                         .addComponent(noBtn))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(prizeLbl)))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -12,4 +12,6 @@ package wwtbam.controller;
 public interface Updateable {
     public void update();
     
+    public void cantUpdate();
+    
 }

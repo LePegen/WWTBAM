@@ -11,24 +11,24 @@ import wwtbam.model.IChoice;
  *
  * @author lipat
  */
-public class CorrectChoice implements IChoice {
+public class Choice implements IChoice{
+    String choice;
+    boolean isCorrect;
 
-    private boolean correct;
-    private String choice;
-
-    public CorrectChoice(String choice) {
-        correct = true;
+    public Choice(String choice, boolean isCorrect) {
         this.choice = choice;
+        this.isCorrect = isCorrect;
     }
-
+    
+    
     @Override
     public boolean isCorrect() {
-        return correct;
+        return this.isCorrect;
     }
 
     @Override
     public String getChoice() {
         return this.choice;
     }
-
+    
 }

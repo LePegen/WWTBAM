@@ -21,6 +21,7 @@ public class Timer implements Runnable, Updateable {
 
     public Timer(Updateable toUpdate) {
         this.toUpdate = toUpdate;
+        this.time=10;
     }
 
     public int getTime() {
@@ -51,20 +52,35 @@ public class Timer implements Runnable, Updateable {
         while (true) {
             if (isRunning == true && time > 0) {
                 time--;
-                update();
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
-                }
+             
+            }else if(time <= 0 ){
+             
+                cantUpdate();
+                break;
             }
-
+            update();
+             try {
+                 Thread.sleep(1000);
+             } catch (InterruptedException ex) {
+                 ex.printStackTrace();
+             } 
         }
     }
 
+    public boolean isIsRunning() {
+        return isRunning;
+    }
+    
+    
+    
     @Override
     public void update() {
         this.toUpdate.update();
+    }
+
+    @Override
+    public void cantUpdate() {
+        this.toUpdate.cantUpdate();
     }
 
 }

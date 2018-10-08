@@ -22,6 +22,7 @@ public class Model implements IItem, IModel {
     IItem currentItem;
     int questionNumber;
     ItemFactory itemFactory;
+    
     int prize;
     int timeLeft;
     int totalTimeLeft;
@@ -30,7 +31,6 @@ public class Model implements IItem, IModel {
         itemFactory = new ItemFactory();
         this.items = itemFactory.getItems();
         questionNumber = -1;
-        totalTimeLeft=30;
         prize = 0;
         nextItem();
     }
@@ -100,6 +100,9 @@ public class Model implements IItem, IModel {
         if (questionNumber < items.size()) {
             questionNumber++;
             currentItem = items.get(questionNumber);
+            this.timeLeft=currentItem.getDifficulty().getTime();
+            this.totalTimeLeft = currentItem.getDifficulty().getTime();
+
             return true;
         }
         return false;

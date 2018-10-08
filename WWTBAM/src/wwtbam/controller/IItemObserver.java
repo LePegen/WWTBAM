@@ -11,6 +11,7 @@ import wwtbam.model.IChoice;
  *
  * @author lipat
  */
+
 //pseudo observer design pattern
 public interface IItemObserver {
 
@@ -25,4 +26,8 @@ public interface IItemObserver {
     void toContinuePanel();
     
     void restart();
+    
+    void exitGame();
+    
+    void start();
 }

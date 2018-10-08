@@ -13,11 +13,10 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.*;
-import wwtbam.model.implementations.CorrectChoice;
 import factory.DifficultyFactory;
-import wwtbam.model.implementations.FalseChoice;
 import wwtbam.model.IChoice;
 import wwtbam.model.IItem;
+import wwtbam.model.implementations.Choice;
 import wwtbam.model.implementations.Item;
 
 /**
@@ -48,11 +47,11 @@ public class ParseJson implements IJsonParse, UseLocalFile {
             String question = currObj.getString("Question");
             String difficulty = currObj.getString("Difficulty");
             ArrayList<IChoice> choices = new ArrayList<>();
-            CorrectChoice answer = new CorrectChoice(currObj.getString("Answer"));
+            Choice answer = new Choice(currObj.getString("Answer"),true);
 
             JSONArray falseAnsArr = currObj.getJSONArray("False Answers");
             for (int j = 0; j < falseAnsArr.length(); j++) {
-                choices.add(new FalseChoice(falseAnsArr.getString(j)));
+                choices.add(new Choice(falseAnsArr.getString(j),false));
             }
             choices.add(answer);
             Item tempItem = new Item(question);

@@ -30,11 +30,7 @@ public class Controller implements IItemObserver, Updateable {
         this.view = view;
         this.view.addObserver(this);
         time = new Timer(this);
-        time.setTimeLeft(model.getTotalTime());
-        view.getQuestionPanel().getTimeLeft().setMaximum(model.getTotalTime());
-        time.startTimer();
         time.run();
-        update();
     }
 
   
@@ -108,19 +104,36 @@ public class Controller implements IItemObserver, Updateable {
 
     @Override
     public void toQuestionPanel() {
-        view.validate();
         view.setPanel(view.getQuestionPanel());
-
+        
     }
 
     @Override
     public void toGameOver() {
+        view.getGameOverPanel().getPrizelbl().setText(String.valueOf(model.getPrize()));
         view.setPanel(view.getGameOverPanel());
     }
 
     @Override
     public void toContinuePanel() {
         view.setPanel(view.getContinuePanel());
+    }
+
+    @Override
+    public void cantUpdate() {
+        toGameOver();
+    }
+
+    @Override
+    public void exitGame() {
+        System.exit(0);
+    }
+
+    @Override
+    public void start() {
+        time.setTimeLeft(model.getTotalTime());
+        view.getQuestionPanel().getTimeLeft().setMaximum(model.getTotalTime());
+        time.startTimer();     
     }
 
 }

@@ -114,11 +114,12 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
     }//GEN-LAST:event_HelpbtnActionPerformed
 
     private void StartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartbtnActionPerformed
+        observer.start();
         observer.toQuestionPanel();
     }//GEN-LAST:event_StartbtnActionPerformed
 
     private void ExitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitbtnActionPerformed
-       System.exit(0);
+       observer.exitGame();
     }//GEN-LAST:event_ExitbtnActionPerformed
 
 

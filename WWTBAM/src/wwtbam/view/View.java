@@ -38,7 +38,7 @@ public class View extends JFrame {
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(500, 500);
-
+        this.setTitle("Who wants to be a millionaire");
         this.setPanel(homePanel);
         this.setVisible(true);
 

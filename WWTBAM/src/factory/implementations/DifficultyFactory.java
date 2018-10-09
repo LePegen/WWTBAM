@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factory;
+package factory.implementations;
 
+import factory.IDifficultyFactory;
 import wwtbam.model.implementations.Difficulty;
 
 /**
  *
  * @author lipat
  */
-public class DifficultyFactory {
+public class DifficultyFactory implements IDifficultyFactory{
 
     public Difficulty getDifficulty(String difficulty) {
         Difficulty toReturn = null;

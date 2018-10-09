@@ -30,4 +30,10 @@ public interface IItemObserver {
     void exitGame();
     
     void start();
+
+    void lifeLine2();
+
+    void lifeLine1();
+
+    void lifeLine3();
 }

@@ -44,18 +44,41 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Startbtn = new javax.swing.JButton();
-        Helpbtn = new javax.swing.JButton();
-        Creditsbtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         Exitbtn = new javax.swing.JButton();
+        Creditsbtn = new javax.swing.JButton();
+        Helpbtn = new javax.swing.JButton();
+        Startbtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        Startbtn.setText("START");
-        Startbtn.addActionListener(new java.awt.event.ActionListener() {
+        setLayout(new javax.swing.OverlayLayout(this));
+
+        jPanel2.setBackground(new java.awt.Color(17, 14, 105));
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 700));
+
+        Exitbtn.setBackground(new java.awt.Color(0, 0, 0));
+        Exitbtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Exitbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Exitbtn.setText("Exit");
+        Exitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StartbtnActionPerformed(evt);
+                ExitbtnActionPerformed(evt);
             }
         });
 
+        Creditsbtn.setBackground(new java.awt.Color(0, 0, 0));
+        Creditsbtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Creditsbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Creditsbtn.setText("Credits");
+        Creditsbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreditsbtnActionPerformed(evt);
+            }
+        });
+
+        Helpbtn.setBackground(new java.awt.Color(0, 0, 0));
+        Helpbtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Helpbtn.setForeground(new java.awt.Color(255, 255, 255));
         Helpbtn.setText("Help");
         Helpbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,46 +86,52 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
             }
         });
 
-        Creditsbtn.setText("CREDITS");
-        Creditsbtn.addActionListener(new java.awt.event.ActionListener() {
+        Startbtn.setBackground(new java.awt.Color(0, 0, 0));
+        Startbtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Startbtn.setForeground(new java.awt.Color(255, 255, 255));
+        Startbtn.setText("Start");
+        Startbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreditsbtnActionPerformed(evt);
+                StartbtnActionPerformed(evt);
             }
         });
 
-        Exitbtn.setText("EXIT");
-        Exitbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitbtnActionPerformed(evt);
-            }
-        });
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Photos/wwtbam_logo.png"))); // NOI18N
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(98, 289, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Startbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Creditsbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Helpbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Exitbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(Startbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(Helpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Creditsbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Exitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Startbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Helpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Creditsbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Exitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(Startbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Helpbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(Creditsbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)
+                        .addComponent(Exitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(340, Short.MAX_VALUE))
+        );
+
+        add(jPanel2);
     }// </editor-fold>//GEN-END:initComponents
 
     private void CreditsbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditsbtnActionPerformed
@@ -114,7 +143,7 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
     }//GEN-LAST:event_HelpbtnActionPerformed
 
     private void StartbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartbtnActionPerformed
-        observer.start();
+         observer.start();
         observer.toQuestionPanel();
     }//GEN-LAST:event_StartbtnActionPerformed
 
@@ -128,6 +157,8 @@ public class HomePanel extends javax.swing.JPanel implements Observable{
     private javax.swing.JButton Exitbtn;
     private javax.swing.JButton Helpbtn;
     private javax.swing.JButton Startbtn;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
     @Override

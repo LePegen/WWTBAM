@@ -41,7 +41,7 @@
                 ]
         },
         {
-            "Question": "Which of there can you store in a char?",
+            "Question": "Which of these can you store in a char?",
             "Answer": "'a'",
             "Difficulty": "Easy",
             "False Answers":[
@@ -55,9 +55,9 @@
             "Answer": "public static void main(String[] s)",
             "Difficulty": "Intermediate",
             "False Answers":[
-                "public static void main(String args)",
-                "Public static void main(String[] args)",
-                "public static void main(Strings[] args)"            
+                "public static \nvoid main(String args)",
+                "Public static \nvoid main(String[] args)",
+                "public static \nvoid main(Strings[] args)"            
                 ]
         },
         {
@@ -81,13 +81,13 @@
                 ]
         },
         {
-            "Question": "Which of these is an advantage application of java?",
+            "Question": "Which of these is an advantage of java?",
             "Answer": "Rich API",
             "Difficulty": "Hard",
             "False Answers":[
                 "Memory Management",
-                "Well Optimized compared to other languages",
-                "High Quality Data Structures"           
+                "Well Optimized compared \nto other languages",
+                "Can Produce High Quality \nData Structures"           
                 ]
         }
     ]

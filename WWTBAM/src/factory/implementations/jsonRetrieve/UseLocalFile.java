@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.model.jsonRetrieve;
+package factory.implementations.jsonRetrieve;
 
 import java.io.File;
 

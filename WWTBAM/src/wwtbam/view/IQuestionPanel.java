@@ -15,7 +15,7 @@ public interface IQuestionPanel{
     //todo: add documentation
     JLabel getQuestionNumber();
 
-    JTextArea getQuestion();
+    JTextPane getQuestion();
 
     JButton getChoice1();
 

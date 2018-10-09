@@ -5,7 +5,8 @@
  */
 package wwtbam.model.implementations;
 
-import factory.ItemFactory;
+import factory.IItemFactory;
+import factory.implementations.*;
 import wwtbam.model.implementations.Difficulty;
 import java.util.ArrayList;
 import wwtbam.model.IChoice;
@@ -21,7 +22,11 @@ public class Model implements IItem, IModel {
     ArrayList<IItem> items;
     IItem currentItem;
     int questionNumber;
-    ItemFactory itemFactory;
+    IItemFactory itemFactory;
+    
+    boolean lifeline1;
+    boolean lifeline2;
+    boolean lifeline3;
     
     int prize;
     int timeLeft;
@@ -38,6 +43,32 @@ public class Model implements IItem, IModel {
     public int getQuestionNumber() {
         return questionNumber;
     }
+
+    public boolean isLifeline1() {
+        return lifeline1;
+    }
+
+    public void setLifeline1(boolean lifeline1) {
+        this.lifeline1 = lifeline1;
+    }
+
+    public boolean isLifeline2() {
+        return lifeline2;
+    }
+
+    public void setLifeline2(boolean lifeline2) {
+        this.lifeline2 = lifeline2;
+    }
+
+    public boolean isLifeline3() {
+        return lifeline3;
+    }
+
+    public void setLifeline3(boolean lifeline3) {
+        this.lifeline3 = lifeline3;
+    }
+    
+    
     
     
 

@@ -10,6 +10,13 @@ import wwtbam.view.components.ContinuePanel;
 import wwtbam.view.components.HomePanel;
 import wwtbam.view.components.QuestionPanel;
 import java.awt.CardLayout;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import wwtbam.controller.IItemObserver;
 import wwtbam.view.components.AboutPanel;
@@ -35,12 +42,13 @@ public class View extends JFrame {
         homePanel = new HomePanel();
         gameOverPanel = new GameOverPanel();
         continuePanel = new ContinuePanel();
-
+        this.setResizable(false);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(500, 500);
+        this.setSize(800, 700);
         this.setTitle("Who wants to be a millionaire");
         this.setPanel(homePanel);
         this.setVisible(true);
+       
 
     }
 
@@ -52,12 +60,11 @@ public class View extends JFrame {
         this.add(currentPanel);
         this.validate();
         this.repaint();
+        currentPanel.repaint();
+        currentPanel.validate();
 
     }
-
-  
-    
-    
+   
 
     public QuestionPanel getQuestionPanel() {
         return questionPanel;
@@ -83,4 +90,3 @@ public class View extends JFrame {
     }
 
 }
-//d

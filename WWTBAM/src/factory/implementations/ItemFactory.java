@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factory;
+package factory.implementations;
 
+import factory.IItemFactory;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,22 +13,24 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import org.json.JSONObject;
 import wwtbam.model.IItem;
-import wwtbam.model.jsonRetrieve.ParseJson;
+import factory.implementations.jsonRetrieve.IJsonParse;
+import factory.implementations.jsonRetrieve.JsonParse;
 
 /**
  *
  * @author lipat
  */
-public class ItemFactory {
+public class ItemFactory implements IItemFactory{
     ///could use some work
-    ParseJson jsonParse;
+    IJsonParse jsonParse;
     ArrayList<IItem> items;
 
     public ItemFactory() {
-        jsonParse = new ParseJson("src/wwtbam/model/jsonRetrieve/choices.json");
+        jsonParse = new JsonParse("src\\factory\\implementations\\jsonRetrieve\\choices.json");
         this.items=jsonParse.getItems();
     }
 
+    @Override
     public ArrayList<IItem> getItems() {
         return items;
     }

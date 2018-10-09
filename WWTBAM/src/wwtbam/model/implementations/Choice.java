@@ -14,7 +14,8 @@ import wwtbam.model.IChoice;
 public class Choice implements IChoice{
     String choice;
     boolean isCorrect;
-
+    
+    
     public Choice(String choice, boolean isCorrect) {
         this.choice = choice;
         this.isCorrect = isCorrect;

@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factory.implementations.jsonRetrieve;
+package factory;
 
-import java.util.ArrayList;
-import wwtbam.model.IItem;
+import wwtbam.model.implementations.Difficulty;
 
 /**
  *
  * @author lipat
  */
-public interface IJsonParse {
-    ArrayList<IItem> getItems();
+public interface IDifficultyFactory {
+    
+    Difficulty getDifficulty(String difficulty); 
+    
 }

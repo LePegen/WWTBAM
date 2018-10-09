@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wwtbam.model.jsonRetrieve;
+package factory.implementations.jsonRetrieve;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.json.*;
-import factory.DifficultyFactory;
+import factory.implementations.DifficultyFactory;
 import wwtbam.model.IChoice;
 import wwtbam.model.IItem;
 import wwtbam.model.implementations.Choice;
@@ -23,7 +23,7 @@ import wwtbam.model.implementations.Item;
  *
  * @author lipat
  */
-public class ParseJson implements IJsonParse, UseLocalFile {
+public class JsonParse implements IJsonParse, UseLocalFile {
 
     File file;
     ArrayList<IItem> items;
@@ -32,7 +32,7 @@ public class ParseJson implements IJsonParse, UseLocalFile {
 
     DifficultyFactory difficultyFactory;
 
-    public ParseJson(String dir) {
+    public JsonParse(String dir) {
         difficultyFactory = new DifficultyFactory();
         items = new ArrayList<>();
         setupFile(dir);
